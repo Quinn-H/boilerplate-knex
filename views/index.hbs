@@ -6,8 +6,16 @@
   <body>
     <ul>
     {{#each users}}
-      <li>{{name}} ({{email}})</li>
+      <li><a href = "/profile/{{id}}">{{name}}</a> ({{email}})</li>
     {{/each}}
     </ul>
+
+    <form class="newuser" action="/newuser" method="post">
+      <input type="text" name="name" value="name">
+      <input type="text" name="email" value="email">
+      <input type="text" name="image" value="image">
+      <button type="submit" name="button">Submit</button>
+    </form>
+
   </body>
 </html>
